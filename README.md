@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📋 Multi-Step Form Engine
 
-## Getting Started
+A highly interactive, animated, and responsive multi-step form built with **Next.js 15**, **React Hook Form**, **ShadCN UI**, and **Framer Motion**. This project demonstrates best practices in form validation, state management, and user experience design.
 
-First, run the development server:
+## ✨ Features
+
+- **🚀 Multi-Step Wizard**: Seamlessly navigate through complex forms with a step-by-step interface.
+- **🎨 Modern UI/UX**: Built with ShadCN UI components and Tailwind CSS for a premium look and feel.
+- **⚡ Framer Motion Animations**: Smooth transitions between steps and dynamic UI elements (e.g., conditional field reveals).
+- **📝 Robust Validation**: strict type checking and form validation using `React Hook Form` and `Zod`.
+- **💾 Auto-Save Simulation**: Visual feedback for autosaving progress.
+- **📱 Responsive Design**: Fully responsive layout that works perfectly on desktop and mobile.
+- **🛠 Dynamic Form Fields**: Add or remove fields on the fly (e.g., adding multiple phone numbers).
+- **🌚 Conditional Logic**: Smart fields that appear/disappear based on user input (e.g., billing address toggle).
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [ShadCN UI](https://ui.shadcn.com/) (Radix UI)
+- **Icons**: [FontAwesome](https://fontawesome.com/) & [Lucide React](https://lucide.dev/)
+- **Forms**: [React Hook Form](https://react-hook-form.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Language**: TypeScript
+
+## 🚀 Getting Started
+
+Follow these steps to get the project running locally.
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm, yarn, or pnpm
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/multistep-form.git
+    cd multistep-form
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000) to see the form in action.
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/
+│   ├── layout.tsx      # Root layout with global styles and fonts
+│   ├── page.tsx        # Main form engine logic and step orchestration
+│   └── globals.css     # Global CSS and Tailwind directives
+├── components/
+│   └── ui/             # Reusable ShadCN UI components (Button, Input, Card, etc.)
+├── lib/
+│   └── utils.ts        # CN utility for class merging
+└── public/             # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`FormEngine` (`app/page.tsx`)**: The core component that handles:
+  - Step state management (`currentStep`, `direction`)
+  - Form data state (`useForm`)
+  - Validation triggers before navigation
+  - Animation orchestration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
